@@ -25,3 +25,9 @@ Code:
 let myPizza = new Pizza("anchovies", "medium");
 myPizza.sizeCost();
 Expected Output: Pizza {toppings: "anchovies", size: "medium", sizeCost: 15}
+
+Test: "It should return a sizeCost value of 18 when size value is 'large'"
+Code:
+let myPizza = new Pizza("anchovies", "large");
+myPizza.sizeCost();
+Expected Output: Pizza {toppings: "anchovies", size: "large", sizeCost: 18}
