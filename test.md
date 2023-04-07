@@ -41,3 +41,9 @@ Code:
 let myPizza = new Pizza();
 myPizza.toppingsCost();
 Expected Output: Pizza {toppings: undefined, size: undefined, toppingsCost: 0}
+
+Test: "It should return a toppingsCost value of 1.50 when the toppings value is an array containing a single item"
+Code:
+let myPizza = new Pizza(["anchovies"]);
+myPizza.toppingsCost();
+Expected Output: Pizza {toppings: ["anchovies"], size: undefined, toppingsCost: 1.50}
