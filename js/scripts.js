@@ -14,5 +14,6 @@ Pizza.prototype.sizeCost = function() {
 };
 
 Pizza.prototype.toppingsCost = function() {
-  this.toppingsCost = 0;
+  this.toppingsCost = this.toppings.length * 1.50;
+  //Note that we can use toFixed on the toppingsCost value to display it as a string with the floating 0 if desired
 }
