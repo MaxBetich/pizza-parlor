@@ -11,3 +11,9 @@ Code:
 let myPizza = new Pizza();
 myPizza.sizeCost();
 Expected Output: Pizza {toppings: undefined, size: undefined, sizeCost: 0}
+
+Test: "It should return a sizeCost value of 12 when size value is 'small'"
+Code:
+let myPizza = new Pizza("anchovies", "small")
+myPizza.sizeCost();
+Expected Output: Pizza {toppings: "anchovies", size: "small", sizeCost: 12}
