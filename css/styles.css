@@ -29,3 +29,8 @@ h3 {
 button {
   background-color: cornsilk;
 }
+
+img {
+  float: right;
+  size: 50px;
+}

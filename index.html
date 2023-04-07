@@ -10,88 +10,91 @@
   <script src="js/scripts.js"></script>
 </head>
 <body>
-  <div class="box1">
-  <h1>Pizza Parlor</h1>
-    <form>
-      <h3>Please Select the Size and Toppings of the Pizza You Wish to Order</h3>
+  <div class="container">
+    <div class="box1">
+      <h1>Pizza Parlor</h1>
+      <form>
+        <h3>Please Select the Size and Toppings of the Pizza You Wish to Order</h3>
+        <div class="box2">
+          <p>Prices are as shown:</p>
+          <ul>
+            <li>Small Pizza: $12 plus toppings</li>
+            <li>Medium Pizza: $15 plus toppings</li>
+            <li>Large Pizza: $18 plus toppings</li>
+            <li>$1.50 per topping</li>
+          </ul>
+        </div>
+        <img src="img/pizza.jpg" alt="a pepperoni pizza">
+        <h4>Size</h4>
+        <label>
+          <input type="radio" name="size" value="small" checked>
+          Small
+        </label><br>
+        <label>
+          <input type="radio" name="size" value="medium">
+          Medium
+        </label><br>
+        <label>
+          <input type="radio" name="size" value="large">
+          Large
+        </label>
+        <h4>Toppings</h4>
+        <label>
+          <input type="checkbox" name="toppings" value="sausage">
+          Sausage
+        </label><br>
+        <label>
+          <input type="checkbox" name="toppings" value="pepperoni">
+          Pepperoni
+        </label><br>
+        <label>
+          <input type="checkbox" name="toppings" value="ground beef">
+          Ground Beef
+        </label><br>
+        <label>
+          <input type="checkbox" name="toppings" value="mushrooms">
+          Mushrooms
+        </label><br>
+        <label>
+          <input type="checkbox" name="toppings" value="olives">
+          Olives
+        </label><br>
+        <label>
+          <input type="checkbox" name="toppings" value="onions">
+          Onions
+        </label><br>
+        <label>
+          <input type="checkbox" name="toppings" value="anchovies">
+          Anchovies
+        </label><br>
+        <label>
+          <input type="checkbox" name="toppings" value="garlic">
+          Garlic
+        </label><br>
+        <label>
+          <input type="checkbox" name="toppings" value="radishes">
+          Radishes
+        </label><br>
+        <label>
+          <input type="checkbox" name="toppings" value="eel">
+          Eel
+        </label><br>
+        <label>
+          <input type="checkbox" name="toppings" value="bananas">
+          Bananas
+        </label><br>
+        <label>
+          <input type="checkbox" name="toppings" value="pineapple">
+          Pineapple
+        </label><br>
+        <button type="submit">Place Order</button>
+      </form>
+    </div>
+    <div class="box1">
       <div class="box2">
-        <p>Prices are as shown:</p>
-        <ul>
-          <li>Small Pizza: $12 plus toppings</li>
-          <li>Medium Pizza: $15 plus toppings</li>
-          <li>Large Pizza: $18 plus toppings</li>
-          <li>$1.50 per topping</li>
-        </ul>
-      </div>
-      <h4>Size</h4>
-      <label>
-        <input type="radio" name="size" value="small" checked>
-        Small
-      </label><br>
-      <label>
-        <input type="radio" name="size" value="medium">
-        Medium
-      </label><br>
-      <label>
-        <input type="radio" name="size" value="large">
-        Large
-      </label>
-      <h4>Toppings</h4>
-      <label>
-        <input type="checkbox" name="toppings" value="sausage">
-        Sausage
-      </label><br>
-      <label>
-        <input type="checkbox" name="toppings" value="pepperoni">
-        Pepperoni
-      </label><br>
-      <label>
-        <input type="checkbox" name="toppings" value="ground beef">
-        Ground Beef
-      </label><br>
-      <label>
-        <input type="checkbox" name="toppings" value="mushrooms">
-        Mushrooms
-      </label><br>
-      <label>
-        <input type="checkbox" name="toppings" value="olives">
-        Olives
-      </label><br>
-      <label>
-        <input type="checkbox" name="toppings" value="onions">
-        Onions
-      </label><br>
-      <label>
-        <input type="checkbox" name="toppings" value="anchovies">
-        Anchovies
-      </label><br>
-      <label>
-        <input type="checkbox" name="toppings" value="garlic">
-        Garlic
-      </label><br>
-      <label>
-        <input type="checkbox" name="toppings" value="radishes">
-        Radishes
-      </label><br>
-      <label>
-        <input type="checkbox" name="toppings" value="eel">
-        Eel
-      </label><br>
-      <label>
-        <input type="checkbox" name="toppings" value="bananas">
-        Bananas
-      </label><br>
-      <label>
-        <input type="checkbox" name="toppings" value="pineapple">
-        Pineapple
-      </label><br>
-      <button type="submit">Place Order</button>
-    </form>
-  </div>
-  <div class="box1">
-    <div class="box2">
-      <div id="order-output">
-        <h3>Please Select At Least One Topping</h3>
+        <div id="order-output">
+          <h3>Please Select At Least One Topping</h3>
+        </div>
       </div>
     </div>
   </div>
