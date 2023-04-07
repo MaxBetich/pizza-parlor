@@ -21,3 +21,17 @@ Pizza.prototype.toppingsCost = function() {
 Pizza.prototype.totalCost = function() {
   this.totalCost = this.sizeCost + this.toppingsCost;
 }
+
+function sizeCreator() {
+  const size = document.querySelector("input[name='size']:checked").value;
+  return size;
+}
+
+function toppingsCreator() {
+  const toppings = document.querySelectorAll("input[name='toppings']:checked");
+  let toppingsArray = [];
+  toppings.forEach(element => {
+    toppingsArray.push(element.value);
+  })
+  return toppingsArray;
+}
