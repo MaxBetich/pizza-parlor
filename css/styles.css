@@ -3,6 +3,19 @@
   margin: auto;
   width: 70%;
   padding: 1%;
+  background-color: slategray;
+}
+
+.box2 {
+  border: solid black 5px;
+  margin: auto;
+  width: 70%;
+  padding: 1%;
+  background-color: cornsilk;
+}
+
+body {
+  background-color: blanchedalmond;
 }
 
 h1 {
@@ -11,4 +24,8 @@ h1 {
 
 h3 {
   text-align: center;
+}
+
+button {
+  background-color: cornsilk;
 }
