@@ -12,3 +12,7 @@ Pizza.prototype.sizeCost = function() {
     this.sizeCost = 18;
   }
 };
+
+Pizza.prototype.toppingsCost = function() {
+  this.toppingsCost = 0;
+}
