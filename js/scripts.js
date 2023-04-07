@@ -4,5 +4,7 @@ function Pizza(toppings, size) {
 }
 
 Pizza.prototype.sizeCost = function() {
-  this.sizeCost = 0;
-}
+  if (this.size === "small") {
+    this.sizeCost = 12;
+  }
+};
