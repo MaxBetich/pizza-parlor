@@ -15,11 +15,11 @@ Pizza.prototype.sizeCost = function() {
 
 Pizza.prototype.toppingsCost = function() {
   this.toppingsCost = this.toppings.length * 1.50;
-}
+};
 
 Pizza.prototype.overallCost = function() {
   this.totalCost = this.sizeCost + this.toppingsCost;
-}
+};
 
 function sizeCreator() {
   const size = document.querySelector("input[name='size']:checked").value;
@@ -31,7 +31,7 @@ function toppingsCreator() {
   let toppingsArray = [];
   toppings.forEach(element => {
     toppingsArray.push(element.value);
-  })
+  });
   return toppingsArray;
 }
 
@@ -45,8 +45,8 @@ function errorMessage() {
 function pizzaCreator() {
   const size = sizeCreator();
   const toppings = toppingsCreator();
-    const newPizza = new Pizza(toppings, size);
-    return newPizza;
+  const newPizza = new Pizza(toppings, size);
+  return newPizza;
 }
 
 function pizzaCost() {
@@ -69,13 +69,13 @@ function orderSubmit(event) {
     const outputDiv = document.getElementById("order-output");
     outputDiv.innerText = "";
     const newH4 = document.createElement("h4");
-    newH4.innerText = "Your Order:"
+    newH4.innerText = "Your Order:";
     outputDiv.append(newH4);
     const newP = document.createElement("p");
     newP.innerText = "Size: " + (orderPizza.size).toUpperCase();
     outputDiv.append(newP);
     const newP2 = document.createElement("p");
-    newP2.innerText = "Toppings:"
+    newP2.innerText = "Toppings:";
     outputDiv.append(newP2);
     const newUl = document.createElement("ul");
     orderPizza.toppings.forEach(topping => {
