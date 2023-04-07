@@ -32,5 +32,18 @@ button {
 
 img {
   float: right;
-  size: 50px;
+  width: 65%;
+  margin: 2%;
+}
+
+.rightimg {
+  float: right;
+  width: 14%;
+  margin: auto;
+}
+
+.leftimg {
+  float: left;
+  width: 14%;
+  margin: auto;
 }
