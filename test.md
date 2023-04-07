@@ -47,3 +47,13 @@ Code:
 let myPizza = new Pizza(["anchovies"]);
 myPizza.toppingsCost();
 Expected Output: Pizza {toppings: ["anchovies"], size: undefined, toppingsCost: 1.50}
+
+
+
+Describe: Pizza.prototype.totalCost()
+
+Test: "It should create an attribute called totalCost within the targeted Pizza object"
+Code:
+let  myPizza = new Pizza();
+myPizza.totalCost();
+Expected Output: Pizza {toppings: undefined, size: undefined, totalCost: 0}
