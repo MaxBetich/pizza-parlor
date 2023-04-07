@@ -80,7 +80,7 @@ function orderSubmit(event) {
     const newUl = document.createElement("ul");
     orderPizza.toppings.forEach(topping => {
       let newLi = document.createElement("li");
-      newLi.append(topping);
+      newLi.append(topping.toUpperCase());
       newUl.append(newLi);
     });
     outputDiv.append(newUl);
