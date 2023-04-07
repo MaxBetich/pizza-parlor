@@ -15,7 +15,6 @@ Pizza.prototype.sizeCost = function() {
 
 Pizza.prototype.toppingsCost = function() {
   this.toppingsCost = this.toppings.length * 1.50;
-  //Note that we can use toFixed on the toppingsCost value to display it as a string with the floating 0 if desired
 }
 
 Pizza.prototype.overallCost = function() {
@@ -46,12 +45,8 @@ function errorMessage() {
 function pizzaCreator() {
   const size = sizeCreator();
   const toppings = toppingsCreator();
-  if (toppings.length === 0) {
-    errorMessage();
-  } else {
     const newPizza = new Pizza(toppings, size);
     return newPizza;
-  }
 }
 
 function pizzaCost() {
@@ -67,27 +62,35 @@ function pizzaCost() {
 function orderSubmit(event) {
   event.preventDefault();
   const orderPizza = pizzaCreator();
-  const orderCost = pizzaCost();
-  const outputDiv = document.getElementById("order-output");
-  outputDiv.innerText = "";
-  const newH4 = document.createElement("h4");
-  newH4.innerText = "Your Order:"
-  outputDiv.append(newH4);
-  const newP = document.createElement("p");
-  newP.innerText = "Size: " + (orderPizza.size).toUpperCase();
-  outputDiv.append(newP);
-  const newP2 = document.createElement("p");
-  newP2.innerText = "Toppings:"
-  outputDiv.append(newP2);
-  const newUl = document.createElement("ul");
-  orderPizza.toppings.forEach(topping => {
-    let newLi = document.createElement("li");
-    newLi.append(topping);
-    newUl.append(newLi);
-  });
-  outputDiv.append(newUl);
-  const newP3 = document.createElement("p");
-  newP3.innerText = "Cost: $" + orderCost.toFixed(2);
-  outputDiv.append(newP3);
+  if (orderPizza.toppings.length === 0) {
+    errorMessage();
+  } else {
+    const orderCost = pizzaCost();
+    const outputDiv = document.getElementById("order-output");
+    outputDiv.innerText = "";
+    const newH4 = document.createElement("h4");
+    newH4.innerText = "Your Order:"
+    outputDiv.append(newH4);
+    const newP = document.createElement("p");
+    newP.innerText = "Size: " + (orderPizza.size).toUpperCase();
+    outputDiv.append(newP);
+    const newP2 = document.createElement("p");
+    newP2.innerText = "Toppings:"
+    outputDiv.append(newP2);
+    const newUl = document.createElement("ul");
+    orderPizza.toppings.forEach(topping => {
+      let newLi = document.createElement("li");
+      newLi.append(topping);
+      newUl.append(newLi);
+    });
+    outputDiv.append(newUl);
+    const newP3 = document.createElement("p");
+    newP3.innerText = "Cost: $" + orderCost.toFixed(2);
+    outputDiv.append(newP3);
+  }
 }
 
+window.addEventListener("load", function() {
+  const form = document.querySelector("form");
+  form.addEventListener("submit", orderSubmit);
+});
