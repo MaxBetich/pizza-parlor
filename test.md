@@ -42,11 +42,11 @@ let myPizza = new Pizza();
 myPizza.toppingsCost();
 Expected Output: Pizza {toppings: undefined, size: undefined, toppingsCost: 0}
 
-Test: "It should return a toppingsCost value of 1.50 when the toppings value is an array containing a single item"
+Test: "It should return a toppingsCost value of 1.5 when the toppings value is an array containing a single item"
 Code:
 let myPizza = new Pizza(["anchovies"]);
 myPizza.toppingsCost();
-Expected Output: Pizza {toppings: ["anchovies"], size: undefined, toppingsCost: 1.50}
+Expected Output: Pizza {toppings: ["anchovies"], size: undefined, toppingsCost: 1.5}
 
 
 
@@ -57,3 +57,11 @@ Code:
 let  myPizza = new Pizza();
 myPizza.totalCost();
 Expected Output: Pizza {toppings: undefined, size: undefined, totalCost: 0}
+
+Test: "It should create an attribute called totalCost within the targeted Pizza object with a value equal to the sum of the sizeCost and toppingsCost values"
+Code:
+let myPizza = new Pizza(["anchovies"], "small")
+myPizza.toppingsCost();
+myPizza.sizeCost();
+myPizza.totalCost();
+Expected Output: Pizza {toppings: ["anchovies], size: "small", toppingsCost: 1.5, sizeCost: 12, totalCost: 13.5}
