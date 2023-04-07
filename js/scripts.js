@@ -18,7 +18,7 @@ Pizza.prototype.toppingsCost = function() {
   //Note that we can use toFixed on the toppingsCost value to display it as a string with the floating 0 if desired
 }
 
-Pizza.prototype.totalCost = function() {
+Pizza.prototype.overallCost = function() {
   this.totalCost = this.sizeCost + this.toppingsCost;
 }
 
@@ -34,4 +34,30 @@ function toppingsCreator() {
     toppingsArray.push(element.value);
   })
   return toppingsArray;
+}
+
+function errorMessage() {
+  document.getElementById("order-output").innerText = "";
+  const newH3 = document.createElement("h3");
+  newH3.innerText = "Please Select At Least One Topping";
+  document.getElementById("order-output").append(newH3);
+}
+
+function pizzaCreator() {
+  const size = sizeCreator();
+  const toppings = toppingsCreator();
+  if (toppings.length === 0) {
+    errorMessage();
+  } else {
+    const newPizza = new Pizza(toppings, size);
+    return newPizza;
+  }
+}
+
+function pizzaCost() {
+  let newPizza = pizzaCreator();
+  newPizza.sizeCost();
+  newPizza.toppingsCost();
+  newPizza.overallCost();
+  return newPizza.totalCost;
 }
