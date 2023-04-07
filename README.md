@@ -11,7 +11,7 @@
 
 ## Description
 
-This page allows the user to place an order at a pizza parlor website by entering in their desired size and combination of toppings.
+This page allows the user to place an order at a pizza parlor website by entering in their desired size and combination of toppings. Functionality allows for a wide mix of toppings, and prompting the user to select at least one topping before displaying the results.
 
 ## Setup/Installation Requirements
  * Clone project from this [GitHub repository](https://github.com/MaxBetich/pizza-parlor.git) to your desktop.
