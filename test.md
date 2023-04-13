@@ -34,22 +34,22 @@ Test: "It should return a toppingsCost value of 1.5 when the toppings value is a
 Code:
 let myPizza = new Pizza(["anchovies"]);
 myPizza.toppingsPrice();
-Expected Output: Pizza {toppings: ["anchovies"], size: undefined, toppingsCost: 1.5, sizeCose: 0, totalCost: 0}
+Expected Output: Pizza {toppings: ["anchovies"], size: undefined, toppingsCost: 1.5, sizeCost: 0, totalCost: 0}
+
+Test: "It should return a toppingsCost value equal to 1.5 times the length of the array stored in the toppings key-value pair"
+Code:
+let myPizza = new Pizza(["anchovies", "bananas"]);
+myPizza.toppingsPrice();
+Expected Output: Pizza {toppings: ["anchovies", "bananas"], size: undefined, toppingsCost: 3, sizeCost: 0, totalCost: 0}
 
 
 
 Describe: Pizza.prototype.overallCost()
 
-Test: "It should create an attribute called totalCost within the targeted Pizza object"
-Code:
-let  myPizza = new Pizza();
-myPizza.overallCost();
-Expected Output: Pizza {toppings: undefined, size: undefined, totalCost: 0}
-
-Test: "It should create an attribute called totalCost within the targeted Pizza object with a value equal to the sum of the sizeCost and toppingsCost values"
+Test: "It should return an attribute called totalCost within the targeted Pizza object with a value equal to the sum of the sizeCost and toppingsCost values"
 Code:
 let myPizza = new Pizza(["anchovies"], "small")
-myPizza.toppingsCost();
-myPizza.sizeCost();
+myPizza.toppingsPrice();
+myPizza.sizePrice();
 myPizza.overallCost();
 Expected Output: Pizza {toppings: ["anchovies], size: "small", toppingsCost: 1.5, sizeCost: 12, totalCost: 13.5}
