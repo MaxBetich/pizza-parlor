@@ -16,7 +16,7 @@ Pizza.prototype.sizePrice = function() {
   }
 };
 
-Pizza.prototype.toppingsCost = function() {
+Pizza.prototype.toppingsPrice = function() {
   this.toppingsCost = this.toppings.length * 1.50;
 };
 
@@ -56,7 +56,7 @@ function pizzaCost() {
   let newPizza = pizzaCreator();
   if (newPizza !== undefined) {
     newPizza.sizePrice();
-    newPizza.toppingsCost();
+    newPizza.toppingsPrice();
     newPizza.overallCost();
     return newPizza.totalCost;
   }
