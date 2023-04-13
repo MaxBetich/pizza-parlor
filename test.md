@@ -6,31 +6,25 @@ Expected Output: Pizza {toppings: ["anchovies", "pineapple"], size: "medium", to
 
 
 
-Describe: Pizza.prototype.sizeCost()
-
-Test: "It should create an attribute called sizeCost within the targeted Pizza object"
-Code: 
-let myPizza = new Pizza();
-myPizza.sizeCost();
-Expected Output: Pizza {toppings: undefined, size: undefined, sizeCost: 0}
+Describe: Pizza.prototype.sizePrice()
 
 Test: "It should return a sizeCost value of 12 when size value is 'small'"
 Code:
 let myPizza = new Pizza("anchovies", "small");
-myPizza.sizeCost();
-Expected Output: Pizza {toppings: "anchovies", size: "small", sizeCost: 12}
+myPizza.sizePrice();
+Expected Output: Pizza {toppings: "anchovies", size: "small", sizeCost: 12, toppingsCost: 0, totalCost: 0}
 
 Test: "It should return a sizeCost value of 15 when size value is 'medium'"
 Code:
 let myPizza = new Pizza("anchovies", "medium");
-myPizza.sizeCost();
-Expected Output: Pizza {toppings: "anchovies", size: "medium", sizeCost: 15}
+myPizza.sizePrice();
+Expected Output: Pizza {toppings: "anchovies", size: "medium", sizeCost: 15, toppingsCost: 0, totalCost: 0}
 
 Test: "It should return a sizeCost value of 18 when size value is 'large'"
 Code:
 let myPizza = new Pizza("anchovies", "large");
-myPizza.sizeCost();
-Expected Output: Pizza {toppings: "anchovies", size: "large", sizeCost: 18}
+myPizza.sizePrice();
+Expected Output: Pizza {toppings: "anchovies", size: "large", sizeCost: 18, toppingsCost: 0, totalCost: 0}
 
 
 
