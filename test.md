@@ -28,19 +28,13 @@ Expected Output: Pizza {toppings: "anchovies", size: "large", sizeCost: 18, topp
 
 
 
-Describe: Pizza.prototype.toppingsCost()
-
-Test: "It should create an attribute called toppingsCost within the targeted Pizza object"
-Code:
-let myPizza = new Pizza();
-myPizza.toppingsCost();
-Expected Output: Pizza {toppings: undefined, size: undefined, toppingsCost: 0}
+Describe: Pizza.prototype.toppingsPrice()
 
 Test: "It should return a toppingsCost value of 1.5 when the toppings value is an array containing a single item"
 Code:
 let myPizza = new Pizza(["anchovies"]);
-myPizza.toppingsCost();
-Expected Output: Pizza {toppings: ["anchovies"], size: undefined, toppingsCost: 1.5}
+myPizza.toppingsPrice();
+Expected Output: Pizza {toppings: ["anchovies"], size: undefined, toppingsCost: 1.5, sizeCose: 0, totalCost: 0}
 
 
 
