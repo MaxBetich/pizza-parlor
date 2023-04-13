@@ -6,7 +6,7 @@ function Pizza(toppings, size) {
   this.totalCost = 0;
 }
 
-Pizza.prototype.sizeCost = function() {
+Pizza.prototype.sizePrice = function() {
   if (this.size === "small") {
     this.sizeCost = 12;
   } else if (this.size === "medium") {
@@ -55,7 +55,7 @@ function pizzaCreator() {
 function pizzaCost() {
   let newPizza = pizzaCreator();
   if (newPizza !== undefined) {
-    newPizza.sizeCost();
+    newPizza.sizePrice();
     newPizza.toppingsCost();
     newPizza.overallCost();
     return newPizza.totalCost;
